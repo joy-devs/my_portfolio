@@ -50,7 +50,7 @@ const ProfileSection: React.FC = () => {
       <Fade direction="right" triggerOnce>
         <div className="relative z-10">
           <h1 className="text-5xl font-bold mb-4">
-            Hello, I'm Antony Gichuki
+            Hello, I'm Joyce Wambui
           </h1>
           <h2 className="text-3xl mb-4">
             And I'm a <span className={`${darkMode ? 'text-gray-400' : 'text-black'}`}>Fullstack Developer</span>
