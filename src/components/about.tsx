@@ -7,17 +7,17 @@ const About: React.FC = () => {
         
         {/* Left side: Profile Card */}
         <div className="w-full md:w-1/3 lg:w-1/4 p-6 rounded-lg shadow-lg bg-gray-100 text-gray-800">
-          <h2 className="text-3xl font-bold text-center mb-4">Anthony Gichuki</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Joyce Wambui</h2>
           <p className="text-center mb-6">Full-stack Software Engineer</p>
           <hr className="mb-6 border-gray-300" />
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <Mail className="w-6 h-6 text-yellow-400" />
-              <span>antonygatitu327@gmail.com</span>
+              <span>joycewambui317@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <Phone className="w-6 h-6 text-yellow-400" />
-              <span>+254 799 16 31 01</span>
+              <span>+254 12209765</span>
             </div>
             <div className="flex items-center space-x-4">
               <Calendar className="w-6 h-6 text-yellow-400" />
