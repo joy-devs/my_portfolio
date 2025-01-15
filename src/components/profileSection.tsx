@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Linkedin, Github } from 'lucide-react';
 import { Fade } from 'react-awesome-reveal';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import profileImage from '../assets/IMG_8390.jpg'; // Adjust path based on your folder structure
+import profileImage from '../assets/IMG_6872.jpg'; // Adjust path based on your folder structure
 
 const ProfileSection: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -56,7 +56,7 @@ const ProfileSection: React.FC = () => {
             And I'm a <span className={`${darkMode ? 'text-gray-400' : 'text-black'}`}>Fullstack Developer</span>
           </h2>
           <p className="text-xl mb-8">
-            {text}
+             I am an enthusiastic software engineer who specializes in building user-friendly and elegant web interfaces.
             <Cursor cursorColor={darkMode ? 'white' : 'black'} />
           </p>
           <button
@@ -68,7 +68,7 @@ const ProfileSection: React.FC = () => {
           </button>
           <div className="flex space-x-6 justify-center md:justify-start">
             <a
-              href="https://www.linkedin.com/in/antony-gichuki-44a2372ab/"
+              href="https://www.linkedin.com/in/joyce-wambui-b826a3265/"
               target="_blank"
               rel="noopener noreferrer"
               className={`transform transition-transform duration-300 hover:scale-110 ${
@@ -78,7 +78,7 @@ const ProfileSection: React.FC = () => {
               <Linkedin className="w-8 h-8" />
             </a>
             <a
-              href="https://github.com/antosnizzah"
+              href="https://github.com/joy-devs"
               target="_blank"
               rel="noopener noreferrer"
               className={`transform transition-transform duration-300 hover:scale-110 ${

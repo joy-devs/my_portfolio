@@ -22,7 +22,7 @@ const About: React.FC = () => {
                         </div>
                         <div className="flex items-center space-x-4">
                             <FiCalendar className="w-6 h-6 text-yellow-400" />
-                            <span>1994</span>
+                            <span>2003</span>
                         </div>
                         <div className="flex items-center space-x-4">
                             <FiMapPin className="w-6 h-6 text-yellow-400" />
@@ -51,7 +51,7 @@ const About: React.FC = () => {
                         I am currently looking for a part-time position as a software developer.
                     </p>
                     <p className="text-xl mb-8">
-                    During my leisure time, I enjoy listening to podcasts on public speaking and leadership, as well as watching movies. <span className="text-purple-500">psychology</span> and <span className="text-purple-500">robotics</span>.
+                    During my leisure time, I enjoy listening to podcasts on public speaking and leadership, as well as watching movies. 
                     </p>
                 </div>
             </div>

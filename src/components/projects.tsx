@@ -15,7 +15,7 @@ const ProjectsSection = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await fetch('https://api.github.com/users/antosnizzah/repos');
+      const response = await fetch('https://api.github.com/users/joy-devs/repos');
       const data = await response.json();
       setProjects(data);
     } catch (error) {
