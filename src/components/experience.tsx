@@ -1,50 +1,49 @@
 import React from 'react';
-import { Monitor, Smartphone, Quote, PenTool } from 'lucide-react'; // Example for icons, replace with your choice
+import { Code, Layout, Users, TrendingUp } from 'lucide-react';
 
 const services = [
   {
-    icon: <Monitor className="w-8 h-8 text-yellow-400" />, // Example icon
-    title: 'Web Development',
-    description: 'High-quality development of sites at the professional level.',
+    icon: <Code className="w-10 h-10 text-blue-500" />,
+    title: 'Software Development',
+    description: 'Crafting clean, efficient, and scalable code for web applications using modern technologies.',
   },
   {
-    icon: <Smartphone className="w-8 h-8 text-yellow-400" />, // Example icon
-    title: 'Responsive Web Applications',
-    description: 'Creating the most modern and high-quality web applications with a professional approach.',
+    icon: <Layout className="w-10 h-10 text-green-500" />,
+    title: 'Effective Communication',
+    description: 'Ensuring clarity and collaboration through transparent and effective communication strategies.',
   },
   {
-    icon: <Quote className="w-8 h-8 text-yellow-400" />, // Example icon
-    title: 'Project Management',
-    description: 'As a certified software engineer, I manage teams to successfully deliver all client projects.',
+    icon: <Users className="w-10 h-10 text-red-500" />,
+    title: 'Team Collaboration',
+    description: 'Leading and collaborating with development teams to deliver projects efficiently.',
   },
   {
-    icon: <PenTool className="w-8 h-8 text-yellow-400" />, // Example icon
-    title: 'Web Design',
-    description: 'The most modern and high-quality design made at a professional level.',
+    icon: <TrendingUp className="w-10 h-10 text-purple-500" />,
+    title: 'Business Growth Strategies',
+    description: 'Helping businesses scale with technology-driven solutions and automation.',
   },
 ];
 
 const WhatImDoing: React.FC = () => {
   return (
-    <div className="bg-gray-900 text-white py-12 mt-24">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold">What I'm Doing</h2>
+    <section className="bg-gradient-to-b from-gray-900 to-black text-white py-16 mt-16">
+      <div className="text-center mb-12">
+        <h2 className="text-5xl font-extrabold tracking-tight">My Expertise</h2>
+        <p className="mt-4 text-lg text-gray-400">Providing quality services with a focus on innovation and excellence.</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
+            className="flex flex-col items-center text-center p-8 rounded-xl bg-gray-800 shadow-lg transform transition-transform duration-500 hover:scale-110 hover:shadow-xl"
           >
-            <div className="flex items-center mb-4">
-              {service.icon}
-              <h3 className="ml-4 text-2xl font-semibold">{service.title}</h3>
-            </div>
-            <p className="text-gray-400">{service.description}</p>
+            {service.icon}
+            <h3 className="text-2xl font-bold mt-4">{service.title}</h3>
+            <p className="text-gray-400 mt-2">{service.description}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
