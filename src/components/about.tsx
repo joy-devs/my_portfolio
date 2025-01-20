@@ -4,13 +4,13 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const About: React.FC = () => {
     return (
-        <div className="min-h-screen p-6 mt-24 bg-white text-black">
+        <div className="min-h-screen p-6 mt-24 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
             <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8">
                 {/* Left side: Profile Card */}
-                <div className="w-full md:w-1/3 lg:w-1/4 p-6 rounded-lg shadow-lg bg-gray-100 text-gray-800">
+                <div className="w-full md:w-1/3 lg:w-1/4 p-6 rounded-lg shadow-xl bg-gray-800 text-gray-100">
                     <h2 className="text-3xl font-bold text-center mb-4">Joyce Wambui</h2>
                     <p className="text-center mb-6">Full-stack Software Engineer</p>
-                    <hr className="mb-6 border-gray-300" />
+                    <hr className="mb-6 border-gray-600" />
                     <div className="space-y-4">
                         <div className="flex items-center space-x-4">
                             <FiMail className="w-6 h-6 text-yellow-400" />
@@ -31,27 +31,28 @@ const About: React.FC = () => {
                     </div>
                     <div className="flex justify-center mt-6 space-x-4">
                         <a href="https://www.linkedin.com/in/joyce-wambui-b826a3265/" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin className="w-6 h-6 text-gray-800 hover:text-black transition-colors duration-300" />
+                            <FaLinkedin className="w-6 h-6 text-white hover:text-yellow-400 transition-colors duration-300" />
                         </a>
                         <a href="https://github.com/joy-devs" target="_blank" rel="noopener noreferrer">
-                            <FaGithub className="w-6 h-6 text-gray-800 hover:text-black transition-colors duration-300" />
+                            <FaGithub className="w-6 h-6 text-white hover:text-yellow-400 transition-colors duration-300" />
                         </a>
                     </div>
                 </div>
 
                 {/* Right side: About Me Text */}
-                <div className="w-full md:w-2/3 lg:w-3/4 p-8 rounded-lg shadow-lg bg-gray-100 text-gray-800">
+                <div className="w-full md:w-2/3 lg:w-3/4 p-8 rounded-lg shadow-xl bg-gray-800 text-gray-100">
                     <h1 className="text-5xl font-bold mb-4">About Me</h1>
                     <p className="text-xl mb-4">
-                    I pursued my passion for coding by enrolling at Kirinyaga University and joining a coding bootcamp with Teach2Give, where I learned full-stack web development. What excites me most about programming is tackling challenges. There's a unique thrill in discovering the perfect solution to a problem.                    </p>
+                        I pursued my passion for coding by enrolling at Kirinyaga University and joining a coding bootcamp with Teach2Give, where I learned full-stack web development. What excites me most about programming is tackling challenges. There's a unique thrill in discovering the perfect solution to a problem.
+                    </p>
                     <p className="text-xl mb-4">
-                        My core stack includes <span className="text-purple-500">, JavaScript, Node.js,React, Typescript and PostgreSQL</span>. I am also familiar with TypeScript and Hono. I constantly seek to learn new technologies and improve my skills.
+                        My core stack includes <span className="text-purple-500">JavaScript, Node.js, React, TypeScript, and PostgreSQL</span>. I am also familiar with TypeScript and Hono. I constantly seek to learn new technologies and improve my skills.
                     </p>
                     <p className="text-xl mb-4">
                         I am currently looking for a part-time position as a software developer.
                     </p>
                     <p className="text-xl mb-8">
-                    During my leisure time, I enjoy listening to podcasts on public speaking and leadership, as well as watching movies. 
+                        During my leisure time, I enjoy listening to podcasts on public speaking and leadership, as well as watching movies.
                     </p>
                 </div>
             </div>

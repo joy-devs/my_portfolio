@@ -46,26 +46,26 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4 flex justify-center items-center mt-10">
-      <div className="max-w-5xl w-full p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+    <section className="min-h-screen bg-gradient-to-b from-blue-600 to-teal-600 text-white py-10 px-4 flex justify-center items-center mt-10">
+      <div className="max-w-5xl w-full p-8 bg-gray-800 dark:bg-gray-900 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
         {/* Left Side Content */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Get in Touch</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            I'd love to hear from you! Whether you have a question or just want to say hi, feel free to reach out.
+          <h2 className="text-3xl font-bold text-gray-100 mb-4">Get in Touch</h2>
+          <p className="text-gray-200">
+          Let’s connect! Feel free to reach out, whether you have a question or simply want to say hello.
           </p>
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
-              <Mail className="w-6 h-6 text-blue-500" />
-              <span className="text-gray-800 dark:text-gray-300">joycewambui317@gmail.com</span>
+              <Mail className="w-6 h-6 text-yellow-400" />
+              <span className="text-gray-100">joycewambui317@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
-              <Phone className="w-6 h-6 text-blue-500" />
-              <span className="text-gray-800 dark:text-gray-300">+25412209765</span>
+              <Phone className="w-6 h-6 text-yellow-400" />
+              <span className="text-gray-100">+25412209765</span>
             </div>
             <div className="flex items-center space-x-4">
-              <MapPin className="w-6 h-6 text-blue-500" />
-              <span className="text-gray-800 dark:text-gray-300">Kutus Kirinyaga </span>
+              <MapPin className="w-6 h-6 text-yellow-400" />
+              <span className="text-gray-100">Kutus Kirinyaga </span>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ const ContactMe = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-900 focus:border-blue-500 focus:ring-blue-500 transition duration-200 ease-in-out"
+                className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out"
                 required
               />
             </div>
@@ -92,7 +92,7 @@ const ContactMe = () => {
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-900 focus:border-blue-500 focus:ring-blue-500 transition duration-200 ease-in-out"
+                className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out"
                 required
               />
             </div>
@@ -103,14 +103,14 @@ const ContactMe = () => {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-900 focus:border-blue-500 focus:ring-blue-500 transition duration-200 ease-in-out h-40"
+                className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out h-40"
                 required
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:outline-none transition duration-300 ease-in-out hover:scale-105 transform"
+              className="w-full py-3 text-white bg-yellow-400 rounded-md hover:bg-yellow-500 focus:ring focus:ring-yellow-300 focus:outline-none transition duration-300 ease-in-out hover:scale-105 transform"
             >
               Send Message
             </button>

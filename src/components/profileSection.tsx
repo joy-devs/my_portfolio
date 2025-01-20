@@ -16,80 +16,82 @@ const ProfileSection: React.FC = () => {
 
   return (
     <section
-      className={`relative flex flex-col md:flex-row items-center justify-center min-h-screen ${
-        darkMode ? 'bg-black text-white' : 'bg-white text-black'
-      } transition-colors duration-500 p-6`}
+      className={`relative flex flex-col items-center justify-center min-h-screen ${
+        darkMode ? 'bg-black text-white' : 'bg-gradient-to-r from-blue-500 to-teal-500 text-white'
+      } transition-all duration-500 py-16 px-8`}
     >
       {/* Dark Mode Toggle Button */}
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className={`absolute top-4 right-4 p-2 rounded-full border ${
-          darkMode ? 'border-white hover:bg-gray-700' : 'border-black hover:bg-gray-200'
-        } transition`}
+        className={`absolute top-6 left-6 p-3 rounded-full border-2 ${
+          darkMode ? 'border-white' : 'border-blue-600'
+        } text-white transition`}
       >
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
 
-      {/* Content */}
-      <Fade direction="left" triggerOnce>
-        <div className="relative mb-6 md:mb-0 md:mr-12">
+      {/* Content Container */}
+      <div className="flex flex-col items-center justify-center text-center lg:text-left space-y-8 lg:space-y-0 lg:flex-row lg:space-x-12">
+        {/* Profile Image */}
+        <Fade direction="up" triggerOnce>
           <div
-            className={`w-64 h-64 rounded-full border-8 ${
-              darkMode ? 'border-white' : 'border-black'
-            } flex items-center justify-center p-1 animate-spin-slow mt-12 md:mt-0`}
+            className={`w-56 h-56 rounded-full border-4 ${
+              darkMode ? 'border-white' : 'border-blue-600'
+            } flex items-center justify-center p-2 mt-8 lg:mt-0 animate-spin-slow`}
           >
             <img
               src={profileImage}
               alt="Profile"
-              className="rounded-full w-full h-full"
+              className="rounded-full w-full h-full object-cover"
             />
           </div>
-        </div>
-      </Fade>
+        </Fade>
 
-      <Fade direction="right" triggerOnce>
-        <div className="relative z-10">
-          <h1 className="text-5xl font-bold mb-4">
-            Hello, I'm Joyce Wambui
-          </h1>
-          <h2 className="text-3xl mb-4">
-            And I'm a <span className={`${darkMode ? 'text-gray-400' : 'text-black'}`}>Fullstack Developer</span>
-          </h2>
-          <p className="text-xl mb-8">
-             I am an enthusiastic software engineer who specializes in building user-friendly and elegant web interfaces.
-            <Cursor cursorColor={darkMode ? 'white' : 'black'} />
-          </p>
-          <button
-            className={`${
-              darkMode ? 'bg-gray-800 hover:bg-gray-600 text-white' : 'bg-black hover:bg-gray-700 text-white'
-            } font-bold py-3 px-6 rounded-full mb-8 transition-all duration-300 transform hover:scale-105`}
-          >
-            Download CV
-          </button>
-          <div className="flex space-x-6 justify-center md:justify-start">
-            <a
-              href="https://www.linkedin.com/in/joyce-wambui-b826a3265/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`transform transition-transform duration-300 hover:scale-110 ${
-                darkMode ? 'hover:text-gray-400' : 'hover:text-black'
-              }`}
+        {/* Text Content */}
+        <Fade direction="right" triggerOnce>
+          <div className="relative z-10 max-w-xl">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+              Hi, I'm Joyce Wambui
+            </h1>
+            <h2 className="text-2xl md:text-3xl mb-6 font-medium">
+              Fullstack Developer with a passion for <span className="text-yellow-400">innovation</span>
+            </h2>
+            <p className="text-lg mb-6 text-gray-300">
+              {text}
+              <Cursor cursorColor={darkMode ? 'white' : 'black'} />
+            </p>
+            <button
+              className={`${
+                darkMode ? 'bg-gray-800 hover:bg-gray-600 text-white' : 'bg-black hover:bg-gray-700 text-white'
+              } font-semibold py-3 px-8 rounded-lg mb-8 transition-all duration-300 transform hover:scale-105`}
             >
-              <Linkedin className="w-8 h-8" />
-            </a>
-            <a
-              href="https://github.com/joy-devs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`transform transition-transform duration-300 hover:scale-110 ${
-                darkMode ? 'hover:text-gray-400' : 'hover:text-black'
-              }`}
-            >
-              <Github className="w-8 h-8" />
-            </a>
+              Download CV
+            </button>
+            <div className="flex space-x-8 justify-center lg:justify-start">
+              <a
+                href="https://www.linkedin.com/in/joyce-wambui-b826a3265/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`transform transition-transform duration-300 hover:scale-125 ${
+                  darkMode ? 'hover:text-gray-400' : 'hover:text-yellow-400'
+                }`}
+              >
+                <Linkedin className="w-10 h-10" />
+              </a>
+              <a
+                href="https://github.com/joy-devs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`transform transition-transform duration-300 hover:scale-125 ${
+                  darkMode ? 'hover:text-gray-400' : 'hover:text-yellow-400'
+                }`}
+              >
+                <Github className="w-10 h-10" />
+              </a>
+            </div>
           </div>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
     </section>
   );
 };
