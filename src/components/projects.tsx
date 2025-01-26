@@ -40,7 +40,11 @@ const ProjectsSection = () => {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects
-            .filter((project) => project.homepage) // Show only deployed projects
+            .filter(
+              (project) =>
+                project.homepage && // Ensure the project has a homepage
+                (project.homepage.includes('vercel.app') || project.homepage.includes('netlify.app')) // Check for Vercel or Netlify deployments
+            )
             .map((project) => (
               <div
                 key={project.id}
@@ -52,25 +56,14 @@ const ProjectsSection = () => {
                 <p className="text-gray-300 dark:text-gray-400 mb-4">
                   {project.description ? project.description : 'No description available.'}
                 </p>
-                {project.homepage ? (
-                  <a
-                    href={project.homepage}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    View Deployed Website
-                  </a>
-                ) : (
-                  <a
-                    href={project.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    View on GitHub
-                  </a>
-                )}
+                <a
+                  href={project.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  View Deployed Website
+                </a>
               </div>
             ))}
         </div>
