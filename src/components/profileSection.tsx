@@ -60,15 +60,16 @@ const ProfileSection: React.FC = () => {
               {text}
               <Cursor cursorColor={darkMode ? 'white' : 'black'} />
             </p>
-            <a href="/public/resumes/joyce-resume (3).pdf" download>
-       <button
-        className={`${
-      darkMode ? 'bg-gray-800 hover:bg-gray-600 text-white' : 'bg-black hover:bg-gray-700 text-white'
-      } font-semibold py-3 px-8 rounded-lg mb-8 transition-all duration-300 transform hover:scale-105`}
-      >
-    Download Resume
-      </button>
-         </a>
+            <a href="public/resumes/joyce-resume (3).pdf" target="_blank" rel="noopener noreferrer">
+             <button
+              className={`${
+               darkMode ? 'bg-gray-800 hover:bg-gray-600 text-white' : 'bg-black hover:bg-gray-700 text-white'
+              } font-semibold py-3 px-8 rounded-lg mb-8 transition-all duration-300 transform hover:scale-105`}
+              >
+            View Resume
+            </button>
+               </a>
+
             <div className="flex space-x-8 justify-center lg:justify-start">
               <a
                 href="https://www.linkedin.com/in/joyce-wambui-b826a3265/"
