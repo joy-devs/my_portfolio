@@ -7,7 +7,7 @@ import profileImage from '../assets/IMG_6872.jpg'; // Adjust path based on your 
 const ProfileSection: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [text] = useTypewriter({
-    words: ["I'm a passionate software engineer with a knack for creating intuitive user interfaces."],
+    words: ["I'm a passionate software developer with a knack for creating intuitive user interfaces."],
     loop: 1,
     typeSpeed: 50,
     deleteSpeed: 300,
@@ -60,13 +60,15 @@ const ProfileSection: React.FC = () => {
               {text}
               <Cursor cursorColor={darkMode ? 'white' : 'black'} />
             </p>
-            <button
-              className={`${
-                darkMode ? 'bg-gray-800 hover:bg-gray-600 text-white' : 'bg-black hover:bg-gray-700 text-white'
-              } font-semibold py-3 px-8 rounded-lg mb-8 transition-all duration-300 transform hover:scale-105`}
-            >
-              Download CV
-            </button>
+            <a href="/public/resumes/joyce-resume (3).pdf" download>
+       <button
+        className={`${
+      darkMode ? 'bg-gray-800 hover:bg-gray-600 text-white' : 'bg-black hover:bg-gray-700 text-white'
+      } font-semibold py-3 px-8 rounded-lg mb-8 transition-all duration-300 transform hover:scale-105`}
+      >
+    Download Resume
+      </button>
+         </a>
             <div className="flex space-x-8 justify-center lg:justify-start">
               <a
                 href="https://www.linkedin.com/in/joyce-wambui-b826a3265/"

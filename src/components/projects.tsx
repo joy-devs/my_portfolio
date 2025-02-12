@@ -8,14 +8,22 @@ const ProjectsSection = () => {
     description: string;
     html_url: string;
     homepage: string;
+    topics?: string[]; // Optional for future topic-based filtering
   }
 
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // List of supported deployment domains
+  const deploymentDomains = ['vercel.app', 'netlify.app', 'github.io'];
+
   const fetchProjects = async () => {
     try {
-      const response = await fetch('https://api.github.com/users/joy-devs/repos');
+      const response = await fetch('https://api.github.com/users/joy-devs/repos', {
+        headers: {
+          Accept: 'application/vnd.github.mercy-preview+json', // Enables fetching topics
+        },
+      });
       const data = await response.json();
       setProjects(data);
     } catch (error) {
@@ -30,8 +38,10 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="my-24 px-6"> {/* Increased margin to push content lower */}
-      <h2 className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">Projects</h2>
+    <section className="my-24 px-6">
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">
+        Projects
+      </h2>
 
       {loading ? (
         <div className="flex justify-center items-center h-64">
@@ -43,7 +53,7 @@ const ProjectsSection = () => {
             .filter(
               (project) =>
                 project.homepage && // Ensure the project has a homepage
-                (project.homepage.includes('vercel.app') || project.homepage.includes('netlify.app')) // Check for Vercel or Netlify deployments
+                deploymentDomains.some((domain) => project.homepage.includes(domain)) // Check if homepage matches any domain
             )
             .map((project) => (
               <div
@@ -54,7 +64,7 @@ const ProjectsSection = () => {
                   {project.name}
                 </h3>
                 <p className="text-gray-300 dark:text-gray-400 mb-4">
-                  {project.description ? project.description : 'No description available.'}
+                  {project.description || 'No description available.'}
                 </p>
                 <a
                   href={project.homepage}
