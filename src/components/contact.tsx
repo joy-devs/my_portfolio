@@ -73,47 +73,35 @@ const ContactMe = () => {
         {/* Right Side (Form) */}
         <div>
           <form onSubmit={sendEmail} className="space-y-6">
-            <div className="relative">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out"
-                required
-              />
-            </div>
+          <div className="relative">
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    value={formData.email}
+    onChange={handleChange}
+    className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out text-gray-800 dark:text-gray-300" // Added text color
+    required
+  />
+</div>
 
-            <div className="relative">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out"
-                required
-              />
-            </div>
+<div className="relative">
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    value={formData.message}
+    onChange={handleChange}
+    className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out h-40 text-gray-800 dark:text-gray-300" // Added text color
+    required
+  ></textarea>
+</div>
 
-            <div className="relative">
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-md border border-gray-600 dark:border-gray-700 dark:bg-gray-900 focus:border-yellow-400 focus:ring-yellow-400 transition duration-200 ease-in-out h-40"
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-3 text-white bg-yellow-400 rounded-md hover:bg-yellow-500 focus:ring focus:ring-yellow-300 focus:outline-none transition duration-300 ease-in-out hover:scale-105 transform"
-            >
-              Send Message
-            </button>
+<button
+  type="submit"
+  className="w-full py-3 text-white bg-yellow-400 rounded-md hover:bg-yellow-500 focus:ring focus:ring-yellow-300 focus:outline-none transition duration-300 ease-in-out hover:scale-105 transform"
+>
+  Send Message
+</button>
 
             {/* Status message */}
             {status && (
