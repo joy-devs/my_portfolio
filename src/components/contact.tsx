@@ -24,10 +24,10 @@ const ContactMe = () => {
     
     emailjs
       .send(
-        'service_h7ni7tr', 
-        'template_lt6qlvr', 
+        'service_3d3rzdr', 
+        'template_gl9bxnf', 
         { name: formData.name, email: formData.email, message: formData.message }, 
-        'Sa9WTo-pAtKQnUx5M' 
+        'TerRwIK2NAUJosevB' 
       )
       .then(
         () => {
