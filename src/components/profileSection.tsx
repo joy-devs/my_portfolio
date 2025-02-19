@@ -7,10 +7,11 @@ import profileImage from "../assets/IMG_6872.jpg"; // Adjust the path
 const ProfileSection: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [resumeUrl, setResumeUrl] = useState<string | null>(null);
-  
+
   useEffect(() => {
     // Fetch the stored resume URL from Vercel Blob Storage
-    const storedResumeUrl = "https://dwat9vxeqzbysyvb.public.blob.vercel-storage.com/joyce-resume%20(3)-9WqFyyTDEZopYed5wEesbbIB4CNoQV.pdf"; // Replace with your actual URL
+    const storedResumeUrl =
+      "https://dwat9vxeqzbysyvb.public.blob.vercel-storage.com/joyce-resume%20(3)-9WqFyyTDEZopYed5wEesbbIB4CNoQV.pdf"; // Replace with your actual URL
     setResumeUrl(storedResumeUrl);
   }, []);
 
@@ -65,7 +66,11 @@ const ProfileSection: React.FC = () => {
 
             {/* View Resume Button (Only Visible If Resume Exists) */}
             {resumeUrl && (
-              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`https://docs.google.com/viewer?url=${resumeUrl}&embedded=true`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button
                   className={`${
                     darkMode ? "bg-gray-800 hover:bg-gray-600 text-white" : "bg-black hover:bg-gray-700 text-white"
