@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Linkedin, Github } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { put } from "@vercel/blob";
 import profileImage from "../assets/IMG_6872.jpg"; // Adjust the path
 
 const ProfileSection: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [resumeUrl, setResumeUrl] = useState<string | null>(null);
+  
+  useEffect(() => {
+    // Fetch the stored resume URL from Vercel Blob Storage
+    const storedResumeUrl = "https://your-vercel-blob-url.com/joyce-resume.pdf"; // Replace with your actual URL
+    setResumeUrl(storedResumeUrl);
+  }, []);
+
   const [text] = useTypewriter({
     words: ["I'm a passionate software developer with a knack for creating intuitive user interfaces."],
     loop: 1,
@@ -15,19 +21,6 @@ const ProfileSection: React.FC = () => {
     deleteSpeed: 300,
     delaySpeed: 2000,
   });
-
-  // Handle resume upload
-  const handleUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    try {
-      const { url } = await put(file.name, file, { access: "public" });
-      setResumeUrl(url); // Directly set the resume URL without localStorage
-    } catch (error) {
-      console.error("Error uploading resume:", error);
-    }
-  };
 
   return (
     <section
@@ -70,15 +63,7 @@ const ProfileSection: React.FC = () => {
               <Cursor cursorColor={darkMode ? "white" : "black"} />
             </p>
 
-            {/* Upload Resume Button */}
-            <input
-              type="file"
-              accept=".pdf"
-              onChange={handleUpload}
-              className="mb-4 bg-gray-100 text-black p-2 rounded cursor-pointer"
-            />
-
-            {/* View Resume Button (Visible Only If Resume Exists) */}
+            {/* View Resume Button (Only Visible If Resume Exists) */}
             {resumeUrl && (
               <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 <button
