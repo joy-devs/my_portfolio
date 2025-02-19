@@ -23,20 +23,11 @@ const ProfileSection: React.FC = () => {
 
     try {
       const { url } = await put(file.name, file, { access: "public" });
-      setResumeUrl(url);
-      localStorage.setItem("resumeUrl", url); // Store in localStorage for persistence
+      setResumeUrl(url); // Directly set the resume URL without localStorage
     } catch (error) {
       console.error("Error uploading resume:", error);
     }
   };
-
-  // Load resume URL from localStorage (optional)
-  React.useEffect(() => {
-    const storedUrl = localStorage.getItem("resumeUrl");
-    if (storedUrl) {
-      setResumeUrl(storedUrl);
-    }
-  }, []);
 
   return (
     <section
