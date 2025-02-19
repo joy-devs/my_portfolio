@@ -10,7 +10,7 @@ const ProfileSection: React.FC = () => {
   
   useEffect(() => {
     // Fetch the stored resume URL from Vercel Blob Storage
-    const storedResumeUrl = "https://your-vercel-blob-url.com/joyce-resume (3).pdf"; // Replace with your actual URL
+    const storedResumeUrl = "https://dwat9vxeqzbysyvb.public.blob.vercel-storage.com/joyce-resume%20(3)-9WqFyyTDEZopYed5wEesbbIB4CNoQV.pdf"; // Replace with your actual URL
     setResumeUrl(storedResumeUrl);
   }, []);
 
