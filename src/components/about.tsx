@@ -9,7 +9,7 @@ const About: React.FC = () => {
                 {/* Left side: Profile Card */}
                 <div className="w-full md:w-1/3 lg:w-1/4 p-6 rounded-lg shadow-xl bg-gray-800 text-gray-100">
                     <h2 className="text-3xl font-bold text-center mb-4">Joyce Wambui</h2>
-                    <p className="text-center mb-6">Full-stack Software Engineer</p>
+                    <p className="text-center mb-6">Full-stack Software Developer</p>
                     <hr className="mb-6 border-gray-600" />
                     <div className="space-y-4">
                         <div className="flex items-center space-x-4">
@@ -49,7 +49,7 @@ const About: React.FC = () => {
                         My core stack includes <span className="text-purple-500">JavaScript, Node.js, React, TypeScript, and PostgreSQL</span>. I am also familiar with TypeScript and Hono. I constantly seek to learn new technologies and improve my skills.
                     </p>
                     <p className="text-xl mb-4">
-                        I am currently looking for a part-time position as a software developer.
+                        I am currently looking for a position as a software developer.
                     </p>
                     <p className="text-xl mb-8">
                         During my leisure time, I enjoy listening to podcasts on public speaking and leadership, as well as watching movies.
