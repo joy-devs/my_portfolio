@@ -52,7 +52,7 @@ const About: React.FC = () => {
                         I am currently looking for a position as a software developer.
                     </p>
                     <p className="text-xl mb-8">
-                        During my leisure time, I enjoy listening to podcasts on public speaking and leadership, as well as watching movies.
+                        During my leisure time, I enjoy listening to podcasts on public speaking, communication and leadership, as well as watching movies.
                     </p>
                 </div>
             </div>
