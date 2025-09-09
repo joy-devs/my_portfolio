@@ -3,6 +3,7 @@ import React from 'react';
 const skills = [
   'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Node.js',
   'Git', 'Tailwind', 'MySQL', 'PostgreSQL', 'Redux', 'Hono', 'Drizzle-orm',
+  'Communication Skills', 'Collaboration Skills', 'Content Research', 'Copywriting', 'Organizational Skills',
 ];
 
 const colors = [
