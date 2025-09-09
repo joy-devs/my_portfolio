@@ -43,8 +43,7 @@ const About: React.FC = () => {
                 <div className="w-full md:w-2/3 lg:w-3/4 p-8 rounded-lg shadow-xl bg-gray-800 text-gray-100">
                     <h1 className="text-5xl font-bold mb-4">About Me</h1>
                     <p className="text-xl mb-4">
-                        I pursued my passion for coding by enrolling at Kirinyaga University and joining a coding bootcamp with Teach2Give, where I learned full-stack web development. What excites me most about programming is tackling challenges. There's a unique thrill in discovering the perfect solution to a problem.
-                    </p>
+                        I pursued my passion for creativity and communication by studying at Kirinyaga University and later joining a coding bootcamp with Teach2Give, where I learned how to simplify complex technical concepts. What excites me most about copywriting is the challenge of turning ideas into clear, engaging, and impactful content. Just like solving coding problems, I enjoy finding the right words and structure to connect with audiences, inspire action, and deliver messages that align with organizational goals.                    </p>
                     <p className="text-xl mb-4">
                         My core stack includes <span className="text-purple-500">JavaScript, Node.js, React, TypeScript, and PostgreSQL</span>. I am also familiar with TypeScript and Hono. I constantly seek to learn new technologies and improve my skills.
                     </p>
