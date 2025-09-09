@@ -47,9 +47,7 @@ const About: React.FC = () => {
                     <p className="text-xl mb-4">
                         My core stack includes <span className="text-purple-500">JavaScript, Node.js, React, TypeScript, and PostgreSQL</span>. I am also familiar with TypeScript and Hono. I constantly seek to learn new technologies and improve my skills.
                     </p>
-                    <p className="text-xl mb-4">
-                        I am currently looking for a position as a software developer.
-                    </p>
+                    
                     <p className="text-xl mb-8">
                         During my leisure time, I enjoy listening to podcasts on public speaking, communication and leadership, as well as watching movies.
                     </p>
