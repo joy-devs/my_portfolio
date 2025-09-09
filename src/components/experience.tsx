@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Layout, Users, TrendingUp } from 'lucide-react';
+import { Code, Layout, Users, TrendingUp, PenTool } from 'lucide-react';
 
 const services = [
   {
@@ -22,6 +22,11 @@ const services = [
     title: 'Business Growth Strategies',
     description: 'Helping businesses scale with technology-driven solutions and automation.',
   },
+  {
+    icon: <PenTool className="w-10 h-10 text-yellow-400" />,
+    title: 'Copywriting & Research',
+    description: 'Creating compelling, audience-focused content backed by thorough research to ensure clarity, impact, and engagement across platforms.',
+  },
 ];
 
 const WhatImDoing: React.FC = () => {
@@ -31,7 +36,7 @@ const WhatImDoing: React.FC = () => {
         <h2 className="text-5xl font-extrabold tracking-tight">My Expertise</h2>
         <p className="mt-4 text-lg text-gray-100">Providing quality services with a focus on innovation and excellence.</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 px-10 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
