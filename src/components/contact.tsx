@@ -71,7 +71,7 @@ const ContactMe = () => {
             </div>
             <div className="flex items-center space-x-4">
               <MapPin className="w-6 h-6 text-yellow-400" />
-              <span className="text-gray-100">Kutus, Kirinyaga</span>
+              <span className="text-gray-100">Nairobi, Kenya</span>
             </div>
           </div>
         </div>
