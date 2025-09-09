@@ -11,7 +11,7 @@ const ProfileSection: React.FC = () => {
   useEffect(() => {
     // Fetch the stored resume URL from Vercel Blob Storage
     const storedResumeUrl =
-      "https://dwat9vxeqzbysyvb.public.blob.vercel-storage.com/Joyce-%20Wambui%20%281%29.pdf"; // Replace with your actual URL
+      "https://dwat9vxeqzbysyvb.public.blob.vercel-storage.com/joyce-%20%28resume%29.pdf"; // Replace with your actual URL
     setResumeUrl(storedResumeUrl);
   }, []);
 
@@ -57,7 +57,7 @@ const ProfileSection: React.FC = () => {
           <div className="relative z-10 max-w-xl">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Hi, I'm Joyce Wambui</h1>
             <h2 className="text-2xl md:text-3xl mb-6 font-medium">
-              Fullstack Developer with a passion for <span className="text-yellow-400">innovation</span>
+              Creative Professional with Technical Expertise and a Passion for <span className="text-yellow-400">innovation</span>
             </h2>
             <p className="text-lg mb-6 text-gray-300">
               {text}
