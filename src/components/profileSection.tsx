@@ -16,7 +16,7 @@ const ProfileSection: React.FC = () => {
   }, []);
 
   const [text] = useTypewriter({
-    words: ["I'm a passionate software developer with a knack for creating intuitive user interfaces."],
+    words: ["I’m a passionate professional with a knack for creating intuitive, user-friendly solutions and clear, engaging content.."],
     loop: 1,
     typeSpeed: 50,
     deleteSpeed: 300,
