@@ -45,7 +45,7 @@ const About: React.FC = () => {
                     <p className="text-xl mb-4">
                         I pursued my passion for creativity and communication by studying at Kirinyaga University and later joining a coding bootcamp with Teach2Give, where I learned how to simplify complex technical concepts. What excites me most about copywriting is the challenge of turning ideas into clear, engaging, and impactful content. Just like solving coding problems, I enjoy finding the right words and structure to connect with audiences, inspire action, and deliver messages that align with organizational goals.                    </p>
                     <p className="text-xl mb-4">
-                        My core stack includes <span className="text-purple-500">JavaScript, Node.js, React, TypeScript, and PostgreSQL</span>. I am also familiar with TypeScript and Hono. I constantly seek to learn new technologies and improve my skills.
+                        My core expertise spans tools and technologies such as <span className="text-purple-500">JavaScript, Node.js, React, TypeScript, and PostgreSQL</span>with additional familiarity in Hono. Beyond technical knowledge, I am committed to continuous learning, adaptability, and improving my problem-solving and communication skills to contribute effectively across different projects and collaborative environments.
                     </p>
                     
                     <p className="text-xl mb-8">
